@@ -16,16 +16,14 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     
-
     var weatherManager = WeatherManager()
     let locationManager = CLLocationManager()
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //The textField should report back to the ViewController
-        
+
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         
@@ -108,10 +106,7 @@ extension WeatherViewController: WeatherManagerDelegate {
 //MARK: - CLLocationManagerDelegate
 
 extension WeatherViewController: CLLocationManagerDelegate {
-    
-    
-    
-    
+
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
          print(error)
     }

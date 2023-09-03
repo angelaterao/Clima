@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,12 @@
 		ADAA27C6231BC02C00365194 /* light_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27C4231BC02B00365194 /* light_background.pdf */; };
 		ADAA27C7231BC02C00365194 /* dark_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27C5231BC02B00365194 /* dark_background.pdf */; };
 		ADAA27CE231BC87F00365194 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27CD231BC87F00365194 /* README.md */; };
+		C6A6D4982A9CE34900ADC6CB /* Keys.json in Sources */ = {isa = PBXBuildFile; fileRef = C6A6D4972A9CE34900ADC6CB /* Keys.json */; };
+		C6A6D49A2A9CE7DC00ADC6CB /* Keys.json.sample in Sources */ = {isa = PBXBuildFile; fileRef = C6A6D4992A9CE7DC00ADC6CB /* Keys.json.sample */; };
+		C6A6D49D2A9CED4700ADC6CB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C6A6D49C2A9CED4700ADC6CB /* SwiftyJSON */; };
+		C6A8D4C62AA4E95400BD7BC1 /* Keys.json in Resources */ = {isa = PBXBuildFile; fileRef = C6A6D4972A9CE34900ADC6CB /* Keys.json */; };
+		C6A8D4C72AA4E95800BD7BC1 /* Keys.json.sample in Resources */ = {isa = PBXBuildFile; fileRef = C6A6D4992A9CE7DC00ADC6CB /* Keys.json.sample */; };
+		C6A8D4C92AA4E9A300BD7BC1 /* KeysData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A8D4C82AA4E9A300BD7BC1 /* KeysData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,9 @@
 		ADAA27C4231BC02B00365194 /* light_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = light_background.pdf; sourceTree = "<group>"; };
 		ADAA27C5231BC02B00365194 /* dark_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dark_background.pdf; sourceTree = "<group>"; };
 		ADAA27CD231BC87F00365194 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C6A6D4972A9CE34900ADC6CB /* Keys.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Keys.json; sourceTree = "<group>"; };
+		C6A6D4992A9CE7DC00ADC6CB /* Keys.json.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = Keys.json.sample; sourceTree = "<group>"; };
+		C6A8D4C82AA4E9A300BD7BC1 /* KeysData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6A6D49D2A9CED4700ADC6CB /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +89,7 @@
 				ADAA27BE231BBFB300365194 /* Info.plist */,
 				ADAA27C5231BC02B00365194 /* dark_background.pdf */,
 				ADAA27C4231BC02B00365194 /* light_background.pdf */,
+				C6A6D4962A9CE20000ADC6CB /* Secrets */,
 			);
 			path = Clima;
 			sourceTree = "<group>";
@@ -105,8 +116,18 @@
 				0B969CC82918B3EC00FF34F0 /* WeatherManager.swift */,
 				0B168A86291BCA50006A2E31 /* WeatherModel.swift */,
 				0B168A84291BBBBA006A2E31 /* WeatherData.swift */,
+				C6A8D4C82AA4E9A300BD7BC1 /* KeysData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C6A6D4962A9CE20000ADC6CB /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				C6A6D4972A9CE34900ADC6CB /* Keys.json */,
+				C6A6D4992A9CE7DC00ADC6CB /* Keys.json.sample */,
+			);
+			path = Secrets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +146,9 @@
 			dependencies = (
 			);
 			name = Clima;
+			packageProductDependencies = (
+				C6A6D49C2A9CED4700ADC6CB /* SwiftyJSON */,
+			);
 			productName = Clima;
 			productReference = ADAA27AD231BBFAF00365194 /* Clima.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +177,9 @@
 				Base,
 			);
 			mainGroup = ADAA27A4231BBFAF00365194;
+			packageReferences = (
+				C6A6D49B2A9CED4700ADC6CB /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = ADAA27AE231BBFAF00365194 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,6 +194,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6A8D4C72AA4E95800BD7BC1 /* Keys.json.sample in Resources */,
+				C6A8D4C62AA4E95400BD7BC1 /* Keys.json in Resources */,
 				ADAA27CE231BC87F00365194 /* README.md in Resources */,
 				ADAA27C7231BC02C00365194 /* dark_background.pdf in Resources */,
 				ADAA27BD231BBFB300365194 /* LaunchScreen.storyboard in Resources */,
@@ -184,9 +213,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADAA27B5231BBFAF00365194 /* WeatherViewController.swift in Sources */,
+				C6A8D4C92AA4E9A300BD7BC1 /* KeysData.swift in Sources */,
+				C6A6D49A2A9CE7DC00ADC6CB /* Keys.json.sample in Sources */,
 				0B168A85291BBBBA006A2E31 /* WeatherData.swift in Sources */,
 				ADAA27B1231BBFAF00365194 /* AppDelegate.swift in Sources */,
 				0B969CC92918B3EC00FF34F0 /* WeatherManager.swift in Sources */,
+				C6A6D4982A9CE34900ADC6CB /* Keys.json in Sources */,
 				0B168A87291BCA50006A2E31 /* WeatherModel.swift in Sources */,
 				ADAA27B3231BBFAF00365194 /* SceneDelegate.swift in Sources */,
 			);
@@ -386,6 +418,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C6A6D49B2A9CED4700ADC6CB /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6A6D49C2A9CED4700ADC6CB /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6A6D49B2A9CED4700ADC6CB /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ADAA27A5231BBFAF00365194 /* Project object */;
 }

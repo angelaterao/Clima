@@ -2,7 +2,7 @@
 //  WeatherModel.swift
 //  Clima
 //
-//  Created by Angela on 09/11/2022.
+//  Created by Angela Terao on 09/11/2022.
 //  Copyright © 2022 App Brewery. All rights reserved.
 //
 

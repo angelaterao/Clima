@@ -2,12 +2,13 @@
 //  WeatherManager.swift
 //  Clima
 //
-//  Created by Angela on 07/11/2022.
+//  Created by Angela Terao on 07/11/2022.
 //  Copyright © 2022 App Brewery. All rights reserved.
 //
 
 import Foundation
 import CoreLocation
+import SwiftyJSON
 
 protocol WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
@@ -17,16 +18,23 @@ protocol WeatherManagerDelegate {
 
 struct WeatherManager {
     
-    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=6d26fc5dae4b19689618bc984dc3834f&units=metric"
+    var weatherURL: String
+    
+    init() {
+        let keyData = KeysData()
+        let apiKey = keyData.getAPIKey()
+        weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=\(apiKey)&units=metric&units=metric"
+    }
     
     var delegate: WeatherManagerDelegate?
     
-    func fetchWeather(cityName: String) {
+    mutating func fetchWeather(cityName: String) {
+        print(weatherURL)
         let urlString = "\(weatherURL)&q=\(cityName)"
         performRequest(with: urlString)
     }
     
-    func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+    mutating func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
         performRequest(with: urlString)
     }
@@ -81,4 +89,8 @@ struct WeatherManager {
     }
     
     
+    
+
+    
 }
+
