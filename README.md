@@ -1,3 +1,13 @@
+## Clima
+
+This app was built during the completion of the iOS bootcamp from Udemy by Angela YU.
+
+See below the screenshots of my finished project:
+![LinkedIn - Clima](https://github.com/angelaterao/Clima/assets/118790712/b8735397-23bd-482f-89f9-368427aad4b0)
+
+
+--------
+
 
 ![App Brewery Banner](Documentation/AppBreweryBanner.png)
 
